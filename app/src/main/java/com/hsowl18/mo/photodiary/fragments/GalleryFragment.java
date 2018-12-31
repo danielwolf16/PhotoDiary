@@ -14,7 +14,6 @@ import com.hsowl18.mo.photodiary.R;
  */
 public class GalleryFragment extends Fragment {
 
-
     public GalleryFragment() {
         // Required empty public constructor
     }

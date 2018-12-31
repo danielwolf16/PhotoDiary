@@ -13,38 +13,32 @@ import java.util.Calendar;
 
 public class PictureObject{
 
-    private static int i = 0;
+    private static int id = 0;
     private String datelast;
 
     private String name;
     private Date date;
     private double shutter;
-    private String f;
-    private String iso;
+    private double f;
+    private int iso;
     private double gps1;
     private double gps2;
     private String[] tags;
 
-    public PictureObject() {
-
-    }
-
-    public void initialize(Object systemService, String _aperture, double _exposure, String _iso) {
-
+    public PictureObject(double _exposure, double _aperture, int _iso) {
         DateFormat df = new SimpleDateFormat("yyyy MM dd");
         String date = df.format(Calendar.getInstance().getTime());
         datelast = date.toString();
         if(date.equals(datelast)) {
-            i++;
+            id++;
 
         } else {
-            i = 1;
+            id = 1;
         }
 
-        name = date + "_" + i;
+        name = date + "_" + id;
         shutter = _exposure;
         f = _aperture;
         iso = _iso;
-
     }
 }
